@@ -18,4 +18,11 @@ extension UIImage{
         guard let image = UIImage(named: "Pokedex") else {return #imageLiteral(resourceName: "Pokedex") }
         return image
     }
+    
+    class var Pokedexdivider: UIImage{
+        guard let image = UIImage(named: "pokedexdivider") else {return #imageLiteral(resourceName: "Pokedex") }
+        return image
+    }
+    
+    
 }

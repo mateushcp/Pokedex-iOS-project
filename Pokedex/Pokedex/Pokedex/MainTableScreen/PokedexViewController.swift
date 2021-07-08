@@ -12,13 +12,15 @@ class PokedexViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         addConstraints()
     }
 
     override func loadView() {
         view = pokedexView
+        self.navigationController?.isNavigationBarHidden = true
         pokedexView.delegate = self
+        
     }
 
     private func addConstraints() {

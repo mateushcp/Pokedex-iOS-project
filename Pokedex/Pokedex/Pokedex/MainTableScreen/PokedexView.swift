@@ -51,14 +51,6 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
         return image
         
     }()
-
-    private lazy var stack: UIStackView = {
-        let stack = UIStackView()
-        stack.spacing = 2
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        return stack
-    }()
     
     private lazy var stackMenu: UIStackView = {
         let stack = UIStackView()
@@ -66,6 +58,26 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
         stack.distribution = .fillEqually
         stack.axis = .horizontal
         return stack
+    }()
+    
+    private lazy var pokedexImageFooter: UIImageView = {
+        let image = UIImageView(image: UIImage.Pokedexdivider)
+        image.contentMode = .scaleAspectFill
+        image.isUserInteractionEnabled = false
+        image.clipsToBounds = true
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+        
+    }()
+    
+    private lazy var pokedexImageTopHeader: UIImageView = {
+        let image = UIImageView(image: UIImage.Pokedexdivider)
+        image.contentMode = .scaleAspectFill
+        image.isUserInteractionEnabled = false
+        image.clipsToBounds = true
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+        
     }()
     
     let pokemonsButton: UIButton = {
@@ -130,7 +142,7 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 
-        cell.populating(text: pokemonData.pokemon[indexPath.row].name.english, desc: pokemonData.pokemon[indexPath.row].type[0])
+        cell.populating(text: pokemonData.pokemon[indexPath.row].name.english, desc: pokemonData.pokemon[indexPath.row].type[0], id: pokemonData.pokemon[indexPath.row].id)
         return cell
     }
     
@@ -140,13 +152,17 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
         delegate?.show(pokemon: pokemon)
     }
     
+   
+    
     private func setupUI(){
         self.backgroundColor = UIColor.white
         
+        addSubview(pokedexImageTopHeader)
         addSubview(pokedexImageHeader)
         addSubview(stackMenu)
         addSubview(tableDex)
-        
+        addSubview(pokedexImageFooter)
+
         stackMenu.addArrangedSubview(UIView.withWidth(12))
         stackMenu.addArrangedSubview(pokemonsButton)
         stackMenu.addArrangedSubview(UIView.withWidth(12))
@@ -159,22 +175,38 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     private func setupConstraints(){
-            
-        pokedexImageHeader.topAnchor.constraint(equalTo: topAnchor,constant: 48).isActive = true
+        
+        pokedexImageHeader.topAnchor.constraint(equalTo: pokedexImageTopHeader.bottomAnchor,constant: 24).isActive = true
         pokedexImageHeader.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         pokedexImageHeader.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 
-        pokedexImageHeader.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        pokedexImageHeader.heightAnchor.constraint(equalToConstant: 48).isActive = true
         pokedexImageHeader.widthAnchor.constraint(equalToConstant: 18).isActive = true
         
-        stackMenu.topAnchor.constraint(equalTo: pokedexImageHeader.bottomAnchor,constant: 28).isActive = true
+        pokedexImageFooter.topAnchor.constraint(equalTo: tableDex.bottomAnchor,constant: 36).isActive = true
+        pokedexImageFooter.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        pokedexImageFooter.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        pokedexImageFooter.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
+
+        pokedexImageFooter.heightAnchor.constraint(equalToConstant: 68).isActive = true
+        pokedexImageFooter.widthAnchor.constraint(equalToConstant: 18).isActive = true
+
+        pokedexImageTopHeader.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        pokedexImageTopHeader.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        pokedexImageTopHeader.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+
+        pokedexImageTopHeader.heightAnchor.constraint(equalToConstant: 68).isActive = true
+        pokedexImageTopHeader.widthAnchor.constraint(equalToConstant: 18).isActive = true
+        
+        stackMenu.topAnchor.constraint(equalTo: pokedexImageHeader.bottomAnchor,constant: 22).isActive = true
         stackMenu.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackMenu.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
         tableDex.topAnchor.constraint(equalTo: stackMenu.bottomAnchor,constant: 8).isActive = true
         tableDex.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         tableDex.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        tableDex.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        tableDex.bottomAnchor.constraint(equalTo: pokedexImageFooter.topAnchor).isActive = true
 
     }
 }

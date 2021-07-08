@@ -18,11 +18,13 @@
 		A91ACCAC268FA8EF00E09523 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91ACCAB268FA8EF00E09523 /* CustomTableViewCell.swift */; };
 		A91ACCAE268FA91A00E09523 /* PokedexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91ACCAD268FA91A00E09523 /* PokedexView.swift */; };
 		A91ACCB0268FA95900E09523 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91ACCAF268FA95900E09523 /* PokedexViewController.swift */; };
+		A9666D3A26978D5D00EF557C /* pokedex.json in Resources */ = {isa = PBXBuildFile; fileRef = A9666D3926978D5D00EF557C /* pokedex.json */; };
+		A9666D3D2697BBC700EF557C /* PokeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9666D3C2697BBC700EF557C /* PokeApi.swift */; };
+		A9666D3F2697C26F00EF557C /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9666D3E2697C26E00EF557C /* GetData.swift */; };
 		A98DEA2F269388ED00AD7199 /* PokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DEA2E269388ED00AD7199 /* PokeData.swift */; };
 		A98DEA312693891100AD7199 /* PokeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DEA302693891100AD7199 /* PokeLoader.swift */; };
 		A98DEA332694D2FF00AD7199 /* DescripitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DEA322694D2FF00AD7199 /* DescripitionView.swift */; };
 		A98DEA362694D36400AD7199 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DEA352694D36400AD7199 /* DescriptionViewController.swift */; };
-		A98DEA5A2697861800AD7199 /* pokedex.json in Resources */ = {isa = PBXBuildFile; fileRef = A98DEA592697861800AD7199 /* pokedex.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +41,13 @@
 		A91ACCAB268FA8EF00E09523 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A91ACCAD268FA91A00E09523 /* PokedexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexView.swift; sourceTree = "<group>"; };
 		A91ACCAF268FA95900E09523 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		A9666D3926978D5D00EF557C /* pokedex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pokedex.json; sourceTree = "<group>"; };
+		A9666D3C2697BBC700EF557C /* PokeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApi.swift; sourceTree = "<group>"; };
+		A9666D3E2697C26E00EF557C /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 		A98DEA2E269388ED00AD7199 /* PokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeData.swift; sourceTree = "<group>"; };
 		A98DEA302693891100AD7199 /* PokeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeLoader.swift; sourceTree = "<group>"; };
 		A98DEA322694D2FF00AD7199 /* DescripitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescripitionView.swift; sourceTree = "<group>"; };
 		A98DEA352694D36400AD7199 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
-		A98DEA592697861800AD7199 /* pokedex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pokedex.json; path = "../../../../../../../Documents/Pokedex-Ios/pokedex.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		A91ACC8A268FA13200E09523 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				A9666D3B2697BBAF00EF557C /* Comunication */,
 				A98DEA342694D31300AD7199 /* DesciptionScreen */,
 				A91ACCAA268FA8CE00E09523 /* MainTableScreen */,
 				A91ACCA2268FA6B700E09523 /* AppUiKit */,
@@ -118,7 +123,7 @@
 		A91ACCAA268FA8CE00E09523 /* MainTableScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A98DEA592697861800AD7199 /* pokedex.json */,
+				A9666D3926978D5D00EF557C /* pokedex.json */,
 				A91ACCAB268FA8EF00E09523 /* CustomTableViewCell.swift */,
 				A91ACCAD268FA91A00E09523 /* PokedexView.swift */,
 				A91ACCAF268FA95900E09523 /* PokedexViewController.swift */,
@@ -126,6 +131,15 @@
 				A98DEA302693891100AD7199 /* PokeLoader.swift */,
 			);
 			path = MainTableScreen;
+			sourceTree = "<group>";
+		};
+		A9666D3B2697BBAF00EF557C /* Comunication */ = {
+			isa = PBXGroup;
+			children = (
+				A9666D3C2697BBC700EF557C /* PokeApi.swift */,
+				A9666D3E2697C26E00EF557C /* GetData.swift */,
+			);
+			path = Comunication;
 			sourceTree = "<group>";
 		};
 		A98DEA342694D31300AD7199 /* DesciptionScreen */ = {
@@ -194,7 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A98DEA5A2697861800AD7199 /* pokedex.json in Resources */,
+				A9666D3A26978D5D00EF557C /* pokedex.json in Resources */,
 				A91ACC98268FA13400E09523 /* LaunchScreen.storyboard in Resources */,
 				A91ACCA9268FA8B100E09523 /* Localizable.strings in Resources */,
 				A91ACC95268FA13400E09523 /* Assets.xcassets in Resources */,
@@ -208,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9666D3D2697BBC700EF557C /* PokeApi.swift in Sources */,
 				A91ACCAC268FA8EF00E09523 /* CustomTableViewCell.swift in Sources */,
 				A91ACCAE268FA91A00E09523 /* PokedexView.swift in Sources */,
 				A98DEA2F269388ED00AD7199 /* PokeData.swift in Sources */,
@@ -219,6 +234,7 @@
 				A91ACC8E268FA13200E09523 /* SceneDelegate.swift in Sources */,
 				A91ACCB0268FA95900E09523 /* PokedexViewController.swift in Sources */,
 				A91ACCA1268FA63A00E09523 /* Extensions.swift in Sources */,
+				A9666D3F2697C26F00EF557C /* GetData.swift in Sources */,
 				A91ACCA7268FA73400E09523 /* UiImage+ImageSources.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

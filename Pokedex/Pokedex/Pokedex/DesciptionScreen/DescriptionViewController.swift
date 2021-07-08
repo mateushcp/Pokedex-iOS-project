@@ -16,14 +16,16 @@ class DescriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
         addConstraints()
     }
-    private func setup() {
-        view.addSubview(descriptionView)
+    
+    override func loadView() {
+        view = descriptionView
+    
+  
     }
     private func addConstraints() {
-        descriptionView.translatesAutoresizingMaskIntoConstraints = false
+
         descriptionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         descriptionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         descriptionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
