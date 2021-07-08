@@ -23,7 +23,6 @@ class PokedexViewController: UIViewController {
 
     private func addConstraints() {
         
-        pokedexView.translatesAutoresizingMaskIntoConstraints = false
         pokedexView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         pokedexView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         pokedexView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
