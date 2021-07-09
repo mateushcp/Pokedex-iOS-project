@@ -4,7 +4,7 @@ Como a API nos retorna imagens pixeladas, resolvi modifiicar a identidade visual
 Foram modficadas as fontes do projeto.
 Adicionei uma extensao que permite o espaçamento de letras, pois a fonte pixelada estava com leitura prejudicada.
 
-![image](https://user-images.githubusercontent.com/56733190/125090177-73aee700-e0a5-11eb-92d6-337d1bcbc10d.png)
+![image](https://user-images.githubusercontent.com/56733190/125093156-6fd09400-e0a8-11eb-9c53-81533d796d54.png)
 
 
 Agora, na versao 1.05, temos uma API intermediaria, feita pelo Gabriel (https://github.com/gabrieldep), https://github.com/gabrieldep/PokemonAPI. Com essa API, iremos trazer na tela de detalhes, dados como, uma imagem em movimento, BaseStats, como, SP Atack, Defense, HP, e etc, além de claro, Nome, id, e tipo de pokemon.
