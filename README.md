@@ -1,5 +1,12 @@
 # Pokedex-iOS-project
 
+Agora, na versao 1.05, temos uma API intermediaria, feita pelo Gabriel (https://github.com/gabrieldep), https://github.com/gabrieldep/PokemonAPI. Com essa API, iremos trazer na tela de detalhes, dados como, uma imagem em movimento, BaseStats, como, SP Atack, Defense, HP, e etc, além de claro, Nome, id, e tipo de pokemon.
+A tela esta em desenvolvimento.
+Nessa versão, mudei o layput principal que envolve o app, trazendo um design mais minimalista e um pouco moderno.
+
+![image](https://user-images.githubusercontent.com/56733190/125004634-52f87a00-e030-11eb-8b51-1a9dd863a76e.png)
+
+
 Para uma versão 1.05, mudei a forma de obtenção dos dados para as celulas, através de um arquivo json.
 Mapeei esses arquivos, no arquivo PokeData.swift, depois, obti os mesmos através do arquivo PokeLoader.swift.
 
