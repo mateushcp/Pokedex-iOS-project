@@ -25,6 +25,7 @@
 		A98DEA312693891100AD7199 /* PokeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DEA302693891100AD7199 /* PokeLoader.swift */; };
 		A98DEA332694D2FF00AD7199 /* DescripitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DEA322694D2FF00AD7199 /* DescripitionView.swift */; };
 		A98DEA362694D36400AD7199 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DEA352694D36400AD7199 /* DescriptionViewController.swift */; };
+		A99432CF2698810B00F595BA /* VPPixel-Simplified.otf in Resources */ = {isa = PBXBuildFile; fileRef = A99432CE26987F3500F595BA /* VPPixel-Simplified.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		A98DEA302693891100AD7199 /* PokeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeLoader.swift; sourceTree = "<group>"; };
 		A98DEA322694D2FF00AD7199 /* DescripitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescripitionView.swift; sourceTree = "<group>"; };
 		A98DEA352694D36400AD7199 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		A99432CE26987F3500F595BA /* VPPixel-Simplified.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VPPixel-Simplified.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		A91ACCA3268FA6D000E09523 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A99432CD26987EAE00F595BA /* Font */,
 				A91ACC94268FA13400E09523 /* Assets.xcassets */,
 				A91ACCA6268FA73400E09523 /* UiImage+ImageSources.swift */,
 			);
@@ -149,6 +152,14 @@
 				A98DEA352694D36400AD7199 /* DescriptionViewController.swift */,
 			);
 			path = DesciptionScreen;
+			sourceTree = "<group>";
+		};
+		A99432CD26987EAE00F595BA /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A99432CE26987F3500F595BA /* VPPixel-Simplified.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99432CF2698810B00F595BA /* VPPixel-Simplified.otf in Resources */,
 				A9666D3A26978D5D00EF557C /* pokedex.json in Resources */,
 				A91ACC98268FA13400E09523 /* LaunchScreen.storyboard in Resources */,
 				A91ACCA9268FA8B100E09523 /* Localizable.strings in Resources */,

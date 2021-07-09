@@ -45,4 +45,8 @@ func getUIColor(hex: String, alpha: Double = 1.0) -> UIColor? {
         blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
         alpha: CGFloat(1.0)
     )
+    
 }
+
+
+

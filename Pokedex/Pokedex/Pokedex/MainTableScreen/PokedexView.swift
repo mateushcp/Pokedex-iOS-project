@@ -61,7 +61,7 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
     }()
     
     private lazy var pokedexImageFooter: UIImageView = {
-        let image = UIImageView(image: UIImage.Pokedexdivider)
+        let image = UIImageView(image: UIImage.PokedexInferior)
         image.contentMode = .scaleAspectFill
         image.isUserInteractionEnabled = false
         image.clipsToBounds = true
@@ -71,7 +71,7 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
     }()
     
     private lazy var pokedexImageTopHeader: UIImageView = {
-        let image = UIImageView(image: UIImage.Pokedexdivider)
+        let image = UIImageView(image: UIImage.PokedexSuperior)
         image.contentMode = .scaleAspectFill
         image.isUserInteractionEnabled = false
         image.clipsToBounds = true
@@ -82,11 +82,11 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     let pokemonsButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Pokemon", for: .normal)
+        button.setTitle("Poke", for: .normal)
         button.layer.cornerRadius = 12
         button.heightAnchor.constraint(equalToConstant: 24).isActive = true
         button.backgroundColor = getUIColor(hex: "#ff4040")
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -177,19 +177,19 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
     private func setupConstraints(){
         
         pokedexImageHeader.topAnchor.constraint(equalTo: pokedexImageTopHeader.bottomAnchor,constant: 24).isActive = true
-        pokedexImageHeader.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        pokedexImageHeader.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6).isActive = true
         pokedexImageHeader.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 
-        pokedexImageHeader.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        pokedexImageHeader.widthAnchor.constraint(equalToConstant: 18).isActive = true
+        pokedexImageHeader.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        pokedexImageHeader.widthAnchor.constraint(equalToConstant: 24).isActive = true
         
-        pokedexImageFooter.topAnchor.constraint(equalTo: tableDex.bottomAnchor,constant: 36).isActive = true
+        pokedexImageFooter.topAnchor.constraint(equalTo: tableDex.bottomAnchor).isActive = true
         pokedexImageFooter.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         pokedexImageFooter.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         pokedexImageFooter.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 
 
-        pokedexImageFooter.heightAnchor.constraint(equalToConstant: 68).isActive = true
+        pokedexImageFooter.heightAnchor.constraint(equalToConstant: 180).isActive = true
         pokedexImageFooter.widthAnchor.constraint(equalToConstant: 18).isActive = true
 
         pokedexImageTopHeader.topAnchor.constraint(equalTo: topAnchor).isActive = true

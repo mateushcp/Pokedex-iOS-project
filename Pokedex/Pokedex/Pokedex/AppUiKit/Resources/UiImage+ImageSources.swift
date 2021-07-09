@@ -24,5 +24,24 @@ extension UIImage{
         return image
     }
     
+    class var PokedexSuperior: UIImage{
+        guard let image = UIImage(named: "pokedexsuperior") else {return #imageLiteral(resourceName: "Pokedex") }
+        return image
+    }
+    
+    class var PokedexInferior: UIImage{
+        guard let image = UIImage(named: "pokedexinferior") else {return #imageLiteral(resourceName: "Pokedex") }
+        return image
+    }
+    
+    class var PokedexSuperior2: UIImage{
+        guard let image = UIImage(named: "pokedexsuperior2") else {return #imageLiteral(resourceName: "Pokedex") }
+        return image
+    }
+    
+    class var PokedexInferior2: UIImage{
+        guard let image = UIImage(named: "pukedexinferior2") else {return #imageLiteral(resourceName: "Pokedex") }
+        return image
+    }
     
 }

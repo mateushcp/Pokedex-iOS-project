@@ -13,8 +13,9 @@ class CustomTableViewCell: UITableViewCell {
    
     private lazy var populationCell: UILabel = {
         let label = UILabel()
-        label.textColor = getUIColor(hex: "#5B5B5B")
-        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.textColor = getUIColor(hex: "#080808")
+//        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.font = UIFont(name: "VPPixel-Simplified", size: 18)
         label.textAlignment = NSTextAlignment.left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -22,8 +23,8 @@ class CustomTableViewCell: UITableViewCell {
     
     private lazy var populationDescCell: UILabel = {
         let label = UILabel()
-        label.textColor = getUIColor(hex: "#9a8989")
-        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.textColor = getUIColor(hex: "#5B5B5B")
+        label.font = UIFont(name: "VPPixel-Simplified", size: 13)
         label.textAlignment = NSTextAlignment.left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -31,9 +32,12 @@ class CustomTableViewCell: UITableViewCell {
     
     private lazy var populationIDCell: UILabel = {
         let label = UILabel()
-        label.textColor = getUIColor(hex: "#5B5B5B")
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        label.textAlignment = NSTextAlignment.center
+        label.textColor = getUIColor(hex: "#080808")
+        label.backgroundColor = getUIColor(hex: "#D8D8D8")
+        label.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        label.font = UIFont(name: "VPPixel-Simplified", size: 16)
+        label.textAlignment = NSTextAlignment.left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -49,8 +53,9 @@ class CustomTableViewCell: UITableViewCell {
     
     public func populating(text: String, desc: String, id: Int){
         populationCell.text = text
+        populationCell.addCharacterSpacing(kernValue: 0.6)
         populationDescCell.text = desc
-        populationIDCell.text = "#" + String(id)
+        populationIDCell.text = " " + String(id) + " "
     }
     
     override func prepareForReuse() {
@@ -86,3 +91,12 @@ class CustomTableViewCell: UITableViewCell {
     }
 }
 
+extension UILabel {
+  func addCharacterSpacing(kernValue: Double = 1.5) {
+    if let labelText = text, labelText.count > 0 {
+      let attributedString = NSMutableAttributedString(string: labelText)
+        attributedString.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: attributedString.length - 1))
+      attributedText = attributedString
+    }
+  }
+}

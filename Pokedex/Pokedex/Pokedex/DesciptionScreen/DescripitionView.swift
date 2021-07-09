@@ -29,7 +29,7 @@ public class DescriptionView: UIView {
     }()
     
     private lazy var pokedexImageFooter: UIImageView = {
-        let image = UIImageView(image: UIImage.Pokedexdivider)
+        let image = UIImageView(image: UIImage.PokedexInferior)
         image.contentMode = .scaleAspectFill
         image.isUserInteractionEnabled = false
         image.clipsToBounds = true
@@ -39,7 +39,7 @@ public class DescriptionView: UIView {
     }()
     
     private lazy var pokedexImageTopHeader: UIImageView = {
-        let image = UIImageView(image: UIImage.Pokedexdivider)
+        let image = UIImageView(image: UIImage.PokedexSuperior)
         image.contentMode = .scaleAspectFill
         image.isUserInteractionEnabled = false
         image.clipsToBounds = true
@@ -50,6 +50,8 @@ public class DescriptionView: UIView {
  
     
     private func setupUI(){
+        self.backgroundColor = UIColor.white
+
         addSubview(pokedexImageTopHeader)
         addSubview(pokedexImageHeader)
         addSubview(pokedexImageFooter)
@@ -66,13 +68,13 @@ public class DescriptionView: UIView {
         pokedexImageHeader.heightAnchor.constraint(equalToConstant: 48).isActive = true
         pokedexImageHeader.widthAnchor.constraint(equalToConstant: 18).isActive = true
         
-        pokedexImageFooter.topAnchor.constraint(equalTo:  bottomAnchor,constant: 36).isActive = true
+        pokedexImageFooter.topAnchor.constraint(equalTo:  bottomAnchor,constant: 24).isActive = true
         pokedexImageFooter.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         pokedexImageFooter.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         pokedexImageFooter.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 
 
-        pokedexImageFooter.heightAnchor.constraint(equalToConstant: 68).isActive = true
+        pokedexImageFooter.heightAnchor.constraint(equalToConstant: 180).isActive = true
         pokedexImageFooter.widthAnchor.constraint(equalToConstant: 18).isActive = true
 
         pokedexImageTopHeader.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -84,3 +86,4 @@ public class DescriptionView: UIView {
    
     }
 }
+
