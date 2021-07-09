@@ -19,6 +19,11 @@ extension UIImage{
         return image
     }
     
+    class var PokedexRetro: UIImage{
+        guard let image = UIImage(named: "PokedexRetro") else {return #imageLiteral(resourceName: "Pokedex") }
+        return image
+    }
+    
     class var Pokedexdivider: UIImage{
         guard let image = UIImage(named: "pokedexdivider") else {return #imageLiteral(resourceName: "Pokedex") }
         return image
