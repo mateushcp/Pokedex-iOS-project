@@ -73,7 +73,7 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
         table.layer.masksToBounds = true
         table.translatesAutoresizingMaskIntoConstraints = false
         table.delegate = self
-        table.backgroundColor = .red
+        table.backgroundColor = .white
         table.dataSource = self
         table.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
         return table
@@ -98,6 +98,9 @@ public class PokedexView: UIView, UITableViewDataSource, UITableViewDelegate {
         delegate?.show(pokemon: pokemon)
     }
     
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 48
+    }
    
     
     private func setupUI(){

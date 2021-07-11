@@ -20,7 +20,7 @@ public class DescriptionView: UIView {
     }
 
     private lazy var pokedexImageHeader: UIImageView = {
-        let image = UIImageView(image: UIImage.PokedexImage)
+        let image = UIImageView(image: UIImage.PokedexRetro)
         image.contentMode = .scaleAspectFill
         image.isUserInteractionEnabled = false
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -61,12 +61,12 @@ public class DescriptionView: UIView {
     
     private func setupConstraints(){
         
-        pokedexImageHeader.topAnchor.constraint(equalTo: pokedexImageTopHeader.bottomAnchor,constant: 24).isActive = true
+        pokedexImageHeader.topAnchor.constraint(equalTo: pokedexImageTopHeader.bottomAnchor,constant: 48).isActive = true
         pokedexImageHeader.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         pokedexImageHeader.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 
-        pokedexImageHeader.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        pokedexImageHeader.widthAnchor.constraint(equalToConstant: 18).isActive = true
+        pokedexImageHeader.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        pokedexImageHeader.widthAnchor.constraint(equalToConstant: 24).isActive = true
         
         pokedexImageFooter.topAnchor.constraint(equalTo:  bottomAnchor,constant: 24).isActive = true
         pokedexImageFooter.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true

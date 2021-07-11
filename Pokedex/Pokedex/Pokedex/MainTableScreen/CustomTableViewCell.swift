@@ -14,7 +14,6 @@ class CustomTableViewCell: UITableViewCell {
     private lazy var populationCell: UILabel = {
         let label = UILabel()
         label.textColor = getUIColor(hex: "#080808")
-//        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.font = UIFont(name: "VPPixel-Simplified", size: 18)
         label.textAlignment = NSTextAlignment.left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +35,7 @@ class CustomTableViewCell: UITableViewCell {
         label.backgroundColor = getUIColor(hex: "#D8D8D8")
         label.layer.cornerRadius = 8
         label.layer.masksToBounds = true
-        label.font = UIFont(name: "VPPixel-Simplified", size: 16)
+        label.font = UIFont(name: "VPPixel-Simplified", size: 24)
         label.textAlignment = NSTextAlignment.left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -84,9 +83,9 @@ class CustomTableViewCell: UITableViewCell {
         
         populationIDCell.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 8).isActive = true
 
-        populationCell.leadingAnchor.constraint(equalTo: populationIDCell.trailingAnchor, constant: 8).isActive = true
-        populationDescCell.topAnchor.constraint(equalTo: populationCell.bottomAnchor, constant: 2).isActive = true
-        populationDescCell.leadingAnchor.constraint(equalTo: populationIDCell.trailingAnchor, constant: 8).isActive = true
+        populationCell.leadingAnchor.constraint(equalTo: populationIDCell.trailingAnchor, constant: 16).isActive = true
+        populationDescCell.topAnchor.constraint(equalTo: populationCell.bottomAnchor, constant: 1).isActive = true
+        populationDescCell.leadingAnchor.constraint(equalTo: populationIDCell.trailingAnchor, constant: 16).isActive = true
 
     }
 }
